@@ -43,11 +43,11 @@ export default function ListExpense(props) {
 
     return (
         <div>
-            <h1>Expenses List</h1>
+            <h1>Products List</h1>
             <table className="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th><th>Item</th><th>Quantity</th><th>Cost</th><th>Price</th><th>Week</th><th>Month</th><th>Year</th>
+                        <th>S/N</th><th>Item</th><th>Quantity</th><th>Cost</th><th>Price</th><th>Date</th><th>Week</th>
                     </tr>
                 </thead>
                 <tbody>

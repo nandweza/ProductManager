@@ -31,29 +31,26 @@ export default function AddExpense(props) {
         <div className="row">
           <div className="col-md-6 offset-3">
             <form className="form" onSubmit={handleSubmit}>
-              <label>No</label>
-              <input type='number' name='no' id='no' placeholder=""
+              <label>S/N</label>
+              <input type='number' name='no' id='no'
                className='form-control' onChange={inputHandler}/>
               <label>ITEM</label>
-              <input type='text' name='item' id='item' placeholder="Enter Item"
+              <input type='text' name='item' id='item' placeholder="eg Laptop"
               className='form-control' onChange={inputHandler}/>
               <label>Quantity</label>
-              <input type='number' name='cost' id='cost' placeholder="Enter Cost"
+              <input type='number' name='cost' id='cost'
               className='form-control' onChange={inputHandler}/>
               <label>Cost</label>
-              <input type='number' name='cost' id='cost' placeholder="Enter Cost"
+              <input type='number' name='cost' id='cost'
               className='form-control' onChange={inputHandler}/>
               <label>Price</label>
-              <input type='number' name='price' id='price' placeholder="Enter Price"
+              <input type='number' name='price' id='price'
+              className='form-control' onChange={inputHandler}/>
+              <label>Date</label>
+              <input type='date' name='date' id='date'
               className='form-control' onChange={inputHandler}/>
               <label>Week</label>
-              <input type='number' name='week' id='week' placeholder="Enter Week"
-              className='form-control' onChange={inputHandler}/>
-              <label>Month</label>
-              <input type='text' name='month' id='month' placeholder="Enter Month"
-              className='form-control' onChange={inputHandler}/>
-              <label>Year</label>
-              <input type='number' name='year' id='year' placeholder="Enter Year"
+              <input type='number' name='week' id='week'
               className='form-control' onChange={inputHandler}/>
 
               <button className="btn btn-primary" type="submit">Add Items Details</button>
