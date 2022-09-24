@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { editExpense } from "./editExpense";
 
-export function ListExpense(props) {
+export default function ListExpense(props) {
 
     const [expenses, setExpenses] = useState([]);
     const url = 'http://localhost:4000/api/expense/';

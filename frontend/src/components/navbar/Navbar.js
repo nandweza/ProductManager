@@ -14,10 +14,10 @@ export default function Navbar() {
             <div className='collapse navbar-collapse'>
               <ul className='navbar-nav'>
                 <li className='nav-item'>
-                  <Link to="createUser" className='nav-link'>Add Item</Link>
+                  <Link to="createExpense" className='nav-link'>Add Item</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to="userList" className='nav-link'>ExpenseList</Link>
+                  <Link to="listExpenses" className='nav-link'>ExpenseList</Link>
                 </li>
               </ul>
             </div>

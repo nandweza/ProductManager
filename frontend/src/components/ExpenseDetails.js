@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 
-export function ExpenseDetails(){
+export default function ExpenseDetails(){
 
     const [expense,setExpense]=useState({});
     const param= useParams();
@@ -22,7 +22,7 @@ export function ExpenseDetails(){
             <button className="btn btn-info" onClick={navigate.goBack}>Go Back</button>
             <h1>Item Details</h1>
             <ul className="list-group">
-                <li className="list-group-item">Name: {expense.id}</li>
+                <li className="list-group-item">Name: {expense.no}</li>
                 <li className="list-group-item">Name: {expense.item}</li>
                 <li className="list-group-item">Name: {expense.quantity}</li>
                 <li className="list-group-item">Name: {expense.cost}</li>

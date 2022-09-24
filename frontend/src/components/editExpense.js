@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-export function EditExpense(props){
+export default function EditExpense(props){
 
     const param= useParams();
     const baseUrl="http://localhost:4000/api/expense/"+param.id;
