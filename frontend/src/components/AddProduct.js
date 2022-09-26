@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import axios from "axios";
 
-export default function AddExpense(props) {
-  const [expense, setExpense] = useState(
+export default function AddProduct(props) {
+  const [product, setProduct] = useState(
     {
-      no:"", item:"", quanity:"", cost:"", price:"", week:"", month:"", year:""
+      sn:"", item:"", quantity:"", unit:"", unitprice:"", costprice:"", sellingprice:"", profit:"", date:""
     }
   );
 
   const inputHandler = (e) => {
-    setExpense((expense) => (
+    setProduct((product) => (
       {
-        ...expense,
+        ...product,
         [e.target.item]:e.target.value
       }
     ))
@@ -19,8 +19,8 @@ export default function AddExpense(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://127.0.0.1:4000/api/expense", expense)
-    .then(res=>props.history.push('/listExpenses'))
+    axios.post("http://127.0.0.1:4000/api/product", product)
+    .then(res=>props.history.push('/listProducts'))
     .catch(error=>console.log(error))
   }
 
@@ -40,17 +40,23 @@ export default function AddExpense(props) {
               <label>Quantity</label>
               <input type='number' name='cost' id='cost'
               className='form-control' onChange={inputHandler}/>
-              <label>Cost</label>
-              <input type='number' name='cost' id='cost'
+              <label>Unit</label>
+              <input type='text' name='unit' id='unit'
               className='form-control' onChange={inputHandler}/>
-              <label>Price</label>
-              <input type='number' name='price' id='price'
+              <label>Unit Price</label>
+              <input type='number' name='uprice' id='uprice'
+              className='form-control' onChange={inputHandler}/>
+              <label>Cost Price</label>
+              <input type='number' name='cprice' id='cprice'
+              className='form-control' onChange={inputHandler}/>
+              <label>Selling Price</label>
+              <input type='number' name='sprice' id='sprice'
+              className='form-control' onChange={inputHandler}/>
+              <label>Profits</label>
+              <input type='number' name='profits' id='profits'
               className='form-control' onChange={inputHandler}/>
               <label>Date</label>
               <input type='date' name='date' id='date'
-              className='form-control' onChange={inputHandler}/>
-              <label>Week</label>
-              <input type='number' name='week' id='week'
               className='form-control' onChange={inputHandler}/>
 
               <button className="btn btn-primary" type="submit">Add Items Details</button>

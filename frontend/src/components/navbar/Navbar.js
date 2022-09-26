@@ -17,10 +17,10 @@ export default function Navbar() {
                   <Link to="/" className='nav-link'>Home</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to="createExpense" className='nav-link'>Add Item</Link>
+                  <Link to="AddProduct" className='nav-link'>Add Item</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to="listExpenses" className='nav-link'>ProductList</Link>
+                  <Link to="listProducts" className='nav-link'>ProductList</Link>
                 </li>
               </ul>
             </div>

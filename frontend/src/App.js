@@ -1,10 +1,10 @@
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
-import AddExpense from './components/AddExpense';
-import ListExpense from './components/ListExpense';
-import EditExpense from './components/editExpense';
-import ExpenseDetails from './components/ExpenseDetails';
+import AddProduct from './components/AddProduct';
+import ListProducts from './components/listProducts';
+import EditProduct from './components/editProduct';
+import ProductDetails from './components/ProductDetails';
 import { 
   BrowserRouter as Router,
   Routes,
@@ -18,10 +18,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/createExpense" element={<AddExpense />}></Route>
-          <Route path="/listExpenses" element={<ListExpense />}></Route>
-          <Route path="/editItem" element={<EditExpense />}></Route>
-          <Route path="/itemDetails" element={<ExpenseDetails />}></Route>
+          <Route path="/AddProduct" element={<AddProduct />}></Route>
+          <Route path="/listProducts" element={<ListProducts />}></Route>
+          <Route path="/editProduct" element={<EditProduct />}></Route>
+          <Route path="/ProductDetails" element={<ProductDetails />}></Route>
         </Routes>
       </div>
     </Router>
